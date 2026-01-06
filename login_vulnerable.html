@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<form onsubmit="login()">
+    Usuario:
+    <input type="text" id="user"><br><br>
+
+    Contraseña:
+    <input type="password" id="pass"><br><br>
+
+    <button type="submit">Ingresar</button>
+</form>
+
+<script>
+function login() {
+
+    // ❌ uso de var
+    var user = document.getElementById("user").value;
+    var pass = document.getElementById("pass").value;
+
+    // ❌ sin validación de datos
+    // ❌ credenciales hardcodeadas
+    // ❌ comparación insegura
+    if (user == "admin" && pass == "1234") {
+        alert("Bienvenido " + user);
+    } else {
+        alert("Acceso denegado");
+    }
+
+    // ❌ lógica sensible en el frontend
+    // ❌ no hay control de intentos
+    return false;
+}
+</script>
+
+</body>
+</html>
